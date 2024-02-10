@@ -9,7 +9,7 @@ import '../services/password_breach_check.dart';
 
 enum PasswordType {
   random,
-  pronounceable,
+  memorable,
 }
 
 class GeneratePasswordProvider extends ChangeNotifier {
@@ -34,7 +34,7 @@ class GeneratePasswordProvider extends ChangeNotifier {
     if (_wordLength < 2) {
       String noun = wordGenerator.randomNoun();
       _genPassword = noun + getRandomNumber();
-      _passwordType = PasswordType.pronounceable;
+      _passwordType = PasswordType.memorable;
       _breachState = null;
       notifyListeners();
       return;
@@ -48,7 +48,7 @@ class GeneratePasswordProvider extends ChangeNotifier {
     }
 
     _genPassword = nouns.join('-');
-    _passwordType = PasswordType.pronounceable;
+    _passwordType = PasswordType.memorable;
     _breachState = null;
     notifyListeners();
   }
