@@ -35,6 +35,7 @@ class GeneratePasswordProvider extends ChangeNotifier {
       String noun = wordGenerator.randomNoun();
       _genPassword = noun + getRandomNumber();
       _passwordType = PasswordType.pronounceable;
+      _breachState = null;
       notifyListeners();
       return;
     }
@@ -48,6 +49,7 @@ class GeneratePasswordProvider extends ChangeNotifier {
 
     _genPassword = nouns.join('-');
     _passwordType = PasswordType.pronounceable;
+    _breachState = null;
     notifyListeners();
   }
 
@@ -56,6 +58,7 @@ class GeneratePasswordProvider extends ChangeNotifier {
     final password = passwordGenerator.generatePassword(_charLength);
     _genPassword = password;
     _passwordType = PasswordType.random;
+    _breachState = null;
     notifyListeners();
   }
 
