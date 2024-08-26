@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lock_smith/pages/home_page.dart';
 
 void main() => runApp(const LockSmith());
 
@@ -10,11 +11,7 @@ class LockSmith extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'LockSmith',
-      home: Scaffold(
-        body: Center(
-          child: Text('LockSmith'),
-        ),
-      ),
+      home: HomePage(),
     );
   }
 }
