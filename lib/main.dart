@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:lock_smith/pages/home_page.dart';
+import 'package:provider/provider.dart';
 
-void main() => runApp(const LockSmith());
+import './pages/home_page.dart';
+import './providers/home_provider.dart';
+
+void main() => runApp(ChangeNotifierProvider(
+      create: (context) => HomeProvider(),
+      child: const LockSmith(),
+    ));
 
 class LockSmith extends StatelessWidget {
   const LockSmith({super.key});
