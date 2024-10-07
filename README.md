@@ -16,13 +16,13 @@ This is a password generator and checker app developed with Flutter. It enables 
 #### Clone the repository using the following command:
 
 ```bash
-git clone https://github.com/iamkartiknayak/Flutter_Lock_Smith.git
+git clone https://github.com/iamkartiknayak/lock-smith.git
 ```
 
 #### Rename the project directory before running flutter commands
 
 ```bash
-mv Flutter_Lock_Smith lock_smith
+mv lock-smith lock_smith
 ```
 
 #### Navigate to the project directory:
